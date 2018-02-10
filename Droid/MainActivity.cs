@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Naxam.Controls.Platform.Droid;
 
 namespace TechCart.Droid
 {
@@ -21,6 +22,10 @@ namespace TechCart.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            BottomTabbedRenderer.BackgroundColor = new Android.Graphics.Color(206, 218, 237);
+            BottomTabbedRenderer.FontSize = 15;
+            BottomTabbedRenderer.IconSize = 20;
+            BottomTabbedRenderer.BottomBarHeight = 50;
 
             LoadApplication(new App());
         }
