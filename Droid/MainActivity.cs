@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Naxam.Controls.Platform.Droid;
+using FFImageLoading.Forms.Droid;
 
 namespace TechCart.Droid
 {
@@ -22,6 +23,8 @@ namespace TechCart.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            CachedImageRenderer.Init(enableFastRenderer: true);
+           
             BottomTabbedRenderer.BackgroundColor = new Android.Graphics.Color(206, 218, 237);
             BottomTabbedRenderer.FontSize = 15;
             BottomTabbedRenderer.IconSize = 20;

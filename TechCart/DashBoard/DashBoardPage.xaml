@@ -4,7 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.Controls.Forms"
     xmlns:local="clr-namespace:TechCart"  
-    x:Class="TechCart.DashBoardPage">
+    x:Class="TechCart.DashBoardPage"
+    Title="TechCart">
 
     <local:HomePage/>
     <local:CategoriesPage/>

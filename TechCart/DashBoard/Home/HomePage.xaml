@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TechCart.HomePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Home"/>
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" xmlns:local="clr-namespace:TechCart" x:Class="TechCart.HomePage" Title="Home">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ScrollView Grid.Row="0" Grid.ColumnSpan="2">
+            <local:HorizontalScrollView Orientation="Horizontal" x:Name="HorizontalView">
+                <local:HorizontalScrollView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="10,0,5,0">
+                                <ffimageloading:CachedImage HorizontalOptions="Start" Source="{Binding ImageUrl}" WidthRequest="75" HeightRequest="75" Aspect="Fill">
+                                    <ffimageloading:CachedImage.Transformations>
+                                        <fftransformations:CircleTransformation />
+                                    </ffimageloading:CachedImage.Transformations>
+                                </ffimageloading:CachedImage>
+                                <Label HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Title}" TextColor="Red" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </local:HorizontalScrollView.ItemTemplate>
+            </local:HorizontalScrollView>
+        </ScrollView>
+    </Grid>
 </ContentPage>

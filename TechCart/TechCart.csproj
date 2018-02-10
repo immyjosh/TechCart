@@ -84,6 +84,7 @@
     <Compile Include="DashBoard\DashBoardPage.xaml.cs">
       <DependentUpon>DashBoardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DashBoard\Home\HomeModel\HomeModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -120,6 +121,7 @@
     <Folder Include="DashBoard\UsersLists\" />
     <Folder Include="DashBoard\Home\" />
     <Folder Include="MasterPageView\" />
+    <Folder Include="DashBoard\Home\HomeModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.121934\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.121934\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
