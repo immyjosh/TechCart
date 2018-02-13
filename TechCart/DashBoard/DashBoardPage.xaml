@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<naxam:BottomTabbedPage 
+<xf:BottomBarPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.Controls.Forms"
     xmlns:local="clr-namespace:TechCart"  
+    BarBackgroundColor="White"
+    BarTextColor="Black"
+    FixedMode="false"
+    xmlns:xf="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
     x:Class="TechCart.DashBoardPage"
     Title="TechCart">
 
@@ -12,4 +16,4 @@
     <local:UsersListPage/>
     <local:AccountPage/>
 
-</naxam:BottomTabbedPage>
+</xf:BottomBarPage>

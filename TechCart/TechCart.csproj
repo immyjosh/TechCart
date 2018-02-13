@@ -111,6 +111,9 @@
     <Reference Include="Naxam.BottomTabbedPage.Forms">
       <HintPath>..\packages\Naxam.BottomTabbedPage.0.1.0.1\lib\portable-net45+wp80+win8+wpa81\Naxam.BottomTabbedPage.Forms.dll</HintPath>
     </Reference>
+    <Reference Include="BottomBar.XamarinForms">
+      <HintPath>..\packages\ThriveGmbH.BottomNavigationBar.XF.1.0.2\lib\portable-net45+win8+wpa81\BottomBar.XamarinForms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
