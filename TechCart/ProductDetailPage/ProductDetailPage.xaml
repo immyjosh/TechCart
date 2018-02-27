@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:TechCart" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TechCart.ProductDetailPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ScrollView Grid.Row="0">
+                <StackLayout>
+                    <!--https://www.allenedmonds.com/on/demandware.static/-/Library-Sites-AllenEdmondsShared/default/dwec88ada2/images/customPages/model-shoe.png-->
+                    <Image x:Name="topp" Source="{Binding ImageUrl}" Aspect="Fill" WidthRequest="250" HeightRequest="250" />
+                    <local:HorizontalScrollView ItemSelected="Handle_ItemSelected" Orientation="Horizontal" x:Name="HorizontalView">
+                        <local:HorizontalScrollView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout x:Name="img" BackgroundColor="Gray" Margin="3,0,3,0" Padding="2">
+                                        <Image Source="{Binding ImageUrl}" Aspect="Fill" WidthRequest="50" HeightRequest="50" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </local:HorizontalScrollView.ItemTemplate>
+                    </local:HorizontalScrollView>
+                    <StackLayout Margin="280,50,0,0" Orientation="Horizontal">
+                        <Image Source="https://png.icons8.com/color/260/rgb-circle-1.png" Aspect="Fill" WidthRequest="50" HeightRequest="50" />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

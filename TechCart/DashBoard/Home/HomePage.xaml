@@ -9,22 +9,71 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <ScrollView Grid.Row="0" Grid.ColumnSpan="2">
-            <local:HorizontalScrollView Orientation="Horizontal" x:Name="HorizontalView">
-                <local:HorizontalScrollView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Margin="10,0,5,0">
-                                <ffimageloading:CachedImage HorizontalOptions="Start" Source="{Binding ImageUrl}" WidthRequest="75" HeightRequest="75" Aspect="Fill">
-                                    <ffimageloading:CachedImage.Transformations>
-                                        <fftransformations:CircleTransformation />
-                                    </ffimageloading:CachedImage.Transformations>
-                                </ffimageloading:CachedImage>
-                                <Label HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Title}" TextColor="Red" />
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </local:HorizontalScrollView.ItemTemplate>
-            </local:HorizontalScrollView>
+            <StackLayout>
+                <local:HorizontalScrollView Orientation="Horizontal" x:Name="HorizontalView">
+                    <local:HorizontalScrollView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="10,0,5,0">
+                                    <ffimageloading:CachedImage HorizontalOptions="Start" Source="{Binding ImageUrl}" WidthRequest="75" HeightRequest="75" Aspect="Fill">
+                                        <ffimageloading:CachedImage.Transformations>
+                                            <fftransformations:CircleTransformation />
+                                        </ffimageloading:CachedImage.Transformations>
+                                    </ffimageloading:CachedImage>
+                                    <Label HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Title}" TextColor="Red" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </local:HorizontalScrollView.ItemTemplate>
+                </local:HorizontalScrollView>
+                <BoxView HeightRequest="5" BackgroundColor="{StaticResource DisabledColor}" />
+                <StackLayout Orientation="Horizontal" HeightRequest="25">
+                    <Label Text="MOST RECENT" TextColor="Black" HorizontalOptions="StartAndExpand" />
+                    <Label Text="View All" TextColor="Black" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+                <local:HorizontalScrollView Orientation="Horizontal" x:Name="HorizontalBoxView">
+                    <local:HorizontalScrollView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="10,0,5,0" Spacing="0" WidthRequest="150">
+                                    <ffimageloading:CachedImage HorizontalOptions="Start" Source="{Binding ImageUrl}" WidthRequest="150" HeightRequest="100" Aspect="Fill" />
+                                    <Label HorizontalTextAlignment="Center" FontSize="13" LineBreakMode="TailTruncation" Text="{Binding Title}" TextColor="Black" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </local:HorizontalScrollView.ItemTemplate>
+                </local:HorizontalScrollView>
+                <BoxView HeightRequest="5" BackgroundColor="{StaticResource DisabledColor}" />
+                <Label Text="You May Also Like" TextColor="Black" HorizontalOptions="StartAndExpand" />
+                <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                <Frame Padding="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200" />
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <ffimageloading:CachedImage Grid.Row="0" Source="https://www.cliverichard.com/img/homepage-01.png" Aspect="Fill"/>
+                        <Label Grid.Row="1" Text="Rs.499" FontAttributes="Bold"/>
+                    </Grid>
+                </Frame>
+                 <Frame Padding="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200" />
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <ffimageloading:CachedImage Grid.Row="0" Source="https://www.cliverichard.com/img/homepage-01.png" Aspect="Fill"/>
+                        <Label Grid.Row="1" Text="Rs.499" FontAttributes="Bold"/>
+                    </Grid>
+                </Frame>
+                    </StackLayout>
+            </StackLayout>
         </ScrollView>
     </Grid>
 </ContentPage>

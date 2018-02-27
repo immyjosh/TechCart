@@ -27,6 +27,7 @@ namespace TechCart
             };
 
             HorizontalView.ItemsSource = Trendings;
+            HorizontalBoxView.ItemsSource = Trendings;
         }
     }
 }

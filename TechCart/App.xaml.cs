@@ -8,7 +8,7 @@ namespace TechCart
         {
             InitializeComponent();
 
-            MainPage = new MasterPage();
+            MainPage = new ProductDetailPage();
         }
 
         protected override void OnStart()
