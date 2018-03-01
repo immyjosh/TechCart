@@ -15,6 +15,7 @@ namespace TechCart
             InitializeComponent();
             LoadImageData();
             LoadColorData();
+            LoadPalletData();
 
         }
         void LoadImageData()
@@ -40,16 +41,22 @@ namespace TechCart
 
             colordata.ItemsSource = Colors;
         }
-
-       
-
-
-        void Handle_ItemSelected(object sender, Xamarin.Forms.ItemTappedEventArgs e)
+        void LoadPalletData()
         {
-            var item = e.Item as HomeModel;
+            Colors = new ObservableCollection<ProductColor>()
+            {
+                new ProductColor() { colorpallet="http://www.color-hex.com/palettes/1051.png"},
+                new ProductColor() { colorpallet="https://www.ledr.com/colours/blue.jpg"},
+                new ProductColor() { colorpallet="http://colornames.facts.co/orangeredcolorcode/orangeredcolor.png"},
+                new ProductColor() { colorpallet="http://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg"},
+                new ProductColor() { colorpallet="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Flag_of_Maguindanao.svg/1280px-Flag_of_Maguindanao.svg.png"},
 
+            };
+
+            colorpallet.ItemsSource = Colors;
         }
 
+       
 
         void Handle_Tapped(object sender, System.EventArgs e)
         {

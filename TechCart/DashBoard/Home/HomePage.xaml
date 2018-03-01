@@ -27,6 +27,7 @@
                     </local:HorizontalScrollView.ItemTemplate>
                 </local:HorizontalScrollView>
                 <BoxView HeightRequest="5" BackgroundColor="{StaticResource DisabledColor}" />
+
                 <StackLayout Orientation="Horizontal" HeightRequest="25">
                     <Label Text="MOST RECENT" TextColor="Black" HorizontalOptions="StartAndExpand" />
                     <Label Text="View All" TextColor="Black" HorizontalOptions="EndAndExpand" />

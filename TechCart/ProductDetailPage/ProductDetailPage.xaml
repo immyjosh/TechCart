@@ -15,8 +15,8 @@
                     <!--https://www.allenedmonds.com/on/demandware.static/-/Library-Sites-AllenEdmondsShared/default/dwec88ada2/images/customPages/model-shoe.png-->
                     <Image x:Name="img1" Source="{Binding Prodimage1}" Aspect="Fill" WidthRequest="250" HeightRequest="250" />
                     <StackLayout Orientation="Horizontal" x:Name="img" Margin="3,0,3,0">
-                        <StackLayout x:Name="selectimg1" Padding="1">
-                            <Image x:Name="prodImage1" BackgroundColor="Blue" Source="{Binding Prodimage1}" Aspect="Fill" WidthRequest="50" HeightRequest="50">
+                        <StackLayout BackgroundColor="Blue" x:Name="selectimg1" Padding="1">
+                            <Image x:Name="prodImage1" Source="{Binding Prodimage1}" Aspect="Fill" WidthRequest="50" HeightRequest="50">
                             </Image>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Handle_image1" />
@@ -29,38 +29,55 @@
                                 <TapGestureRecognizer Tapped="Handle_image2" />
                             </StackLayout.GestureRecognizers>
                         </StackLayout>
-                        <StackLayout x:Name="selectimg3" Padding="1" >
+                        <StackLayout x:Name="selectimg3" Padding="1">
                             <Image x:Name="prodImage3" Source="{Binding Prodimage3}" Aspect="Fill" WidthRequest="50" HeightRequest="50">
                             </Image>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Handle_image3" />
                             </StackLayout.GestureRecognizers>
                         </StackLayout>
-                        <StackLayout x:Name="selectimg4" Padding="1" >
+                        <StackLayout x:Name="selectimg4" Padding="1">
                             <Image x:Name="prodImage4" Source="{Binding Prodimage4}" Aspect="Fill" WidthRequest="50" HeightRequest="50">
                             </Image>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Handle_image4" />
                             </StackLayout.GestureRecognizers>
                         </StackLayout>
+                        <!--      Color Image              -->
+                        <!--<StackLayout  IsVisible="true" x:Name="test"  Orientation="Horizontal">
+                            <BoxView  BackgroundColor="#000000" WidthRequest="30" HeightRequest="5" />
+                            <BoxView  BackgroundColor="#774c28" WidthRequest="30" HeightRequest="5" />
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Handle_Tapped" NumberOfTapsRequired="1" />
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>-->
+                        <StackLayout>
+                            <Label Text="Colors:" TextColor="Black" />
+                            <local:HorizontalScrollView Orientation="Horizontal" x:Name="colorpallet">
+                                <local:HorizontalScrollView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Margin="1,0,1,0">
+                                                <Image HorizontalOptions="Start" Source="{Binding colorpallet}" WidthRequest="30" HeightRequest="30" Aspect="Fill" />
+                                                <StackLayout.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="Handle_Tapped" NumberOfTapsRequired="1" />
+                                                </StackLayout.GestureRecognizers>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </local:HorizontalScrollView.ItemTemplate>
+                            </local:HorizontalScrollView>
+                        </StackLayout>
+                        <!--     end color image               -->
                     </StackLayout>
-                    <!--      Color Image              -->
-                    <StackLayout IsVisible="true" x:Name="test" Margin="280,-55,0,0" Orientation="Horizontal">
-                        <Image Source="https://png.icons8.com/color/260/rgb-circle-1.png" Aspect="Fill" WidthRequest="50" HeightRequest="50">
-                        </Image>
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Handle_Tapped" NumberOfTapsRequired="1" />
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                    <!--     end color image               -->
                     <BoxView BackgroundColor="Gray" HeightRequest="5" />
                     <!--      Color Pallet              -->
                     <StackLayout x:Name="pallet" IsVisible="false">
-                        <local:HorizontalScrollView ItemSelected="Handle_ItemSelected" Orientation="Horizontal" x:Name="colordata">
+                        <local:HorizontalScrollView Orientation="Horizontal" x:Name="colordata">
                             <local:HorizontalScrollView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
-                                        <StackLayout x:Name="img" BackgroundColor="Gray" Margin="3,0,3,0" Padding="2">
+                                        <StackLayout BackgroundColor="Gray" Margin="3,0,3,0" Padding="2">
                                             <Image Source="{Binding formalshoe}" Aspect="Fill" WidthRequest="50" HeightRequest="50" />
                                         </StackLayout>
                                     </ViewCell>
