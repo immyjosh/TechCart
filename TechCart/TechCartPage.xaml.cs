@@ -8,5 +8,19 @@ namespace TechCart
         {
             InitializeComponent();
         }
+        void Handle_Tapped1(object sender, System.EventArgs e)
+        {
+
+
+            up.IsVisible = true;
+
+        }
+        void Handle_Tapped2(object sender, System.EventArgs e)
+        {
+
+
+            down.IsVisible = true;
+
+        }
     }
 }

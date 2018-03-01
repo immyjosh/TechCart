@@ -3,6 +3,9 @@ namespace TechCart
 {
     public class ProductModel
     {
-        public string Topimage { get; set; }
+        public string Prodimage1 { get; set; }
+        public string Prodimage2 { get; set; }
+        public string Prodimage3 { get; set; }
+        public string Prodimage4 { get; set; }
     }
 }

@@ -93,6 +93,7 @@
       <DependentUpon>ProductDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ProductDetailPage\ProductModel\ProductModel.cs" />
+    <Compile Include="ProductDetailPage\ProductModel\ProductColor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
